@@ -23,3 +23,8 @@ elif command and command[0] == 'stop_and_standby':
                 xbmc.executebuiltin("PlayerControl(Stop)")
                 time.sleep(3)
         xbmc.executebuiltin('CECStandby')
+elif command and command[0] == 'pause_and_standby':
+        if xbmc.Player().isPlaying():
+                xbmc.executebuiltin("PlayerControl(Pause)")
+                time.sleep(3)
+        xbmc.executebuiltin('CECStandby')
